@@ -1,0 +1,121 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-y: hidden;
+}
+
+ul li{
+    list-style: none;
+}
+
+.sidebar{
+    margin-right: 15px;
+}
+.productprice{
+    align-self: bottom;
+}
+.cardbottom{
+    align-self: bottom;
+}
+.icon{
+    height: 2rem;
+}
+
+.category-text{
+    text-transform: capitalize;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border: 1px solid lightgrey;
+    margin: 5px;
+    height: 25rem;
+    border-radius: 20px;
+    padding: 10px;
+}
+.addbtn{
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    padding: 8px;
+
+
+}
+.addbtn:hover{
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+}
+.root{
+    display: grid;
+    grid-template-columns: 1.5fr 4fr 1fr;
+}
+
+.allproductscontent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 24%;
+    overflow-y: scroll;
+}
+.jewelerycontent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.allproductscontent::-webkit-scrollbar {
+    width: 8px;               /* width of the entire scrollbar */
+}
+
+.allproductscontent::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);        /* color of the tracking area */
+}
+
+.allproductscontent::-webkit-scrollbar-thumb {
+    background-color: rgb(74, 74, 77);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+.cartcard{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    margin: 5px;
+    width: 50rem;
+    border-radius: 20px;
+    padding: 5px;
+}
+.cartsidebar{
+    display: flex;
+    justify-content: center;
+}
+.cartcount{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px;
+    height: 15px;
+}
+.btn{
+    background-color: #fff;
+    border: none;
+    font-size: 25px;
+}
+.cartItemBottom{
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    justify-content: space-around;
+}
