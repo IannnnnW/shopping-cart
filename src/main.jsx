@@ -5,6 +5,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Products, JeweleryProducts} from './Components/Products.jsx'
 import Cart from './Components/Cart.jsx'
+import Home from './Components/Home.jsx'
 
 const router = createBrowserRouter([
   {
@@ -12,11 +13,15 @@ const router = createBrowserRouter([
     element: <Root/>,
     children: [
       {
+        index: true,
+        element: <Home/>
+      },
+      {
         path:'products/',
         element: <Products/>
       },
       {
-        path:'products/jewelery/',
+        path:'jewelery/',
         element: <JeweleryProducts/>
       },
       {

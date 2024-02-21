@@ -39,7 +39,7 @@ const CartItem = ({item, removeItem, getCost})=>{
                 {item.count}
                 <button className='btn' onClick={handleIncrease}>+</button>
             </div>
-            <span>{itemCost}</span>
+            <span>{(item.count * item.price).toFixed(2)}</span>
         </div>
     )
 }
@@ -73,13 +73,12 @@ const Cart = ()=>{
             {cartItems.map(item => 
                 <CartItem key={item.id} item={item} removeItem={handleRemoveItem} getCost={handleCountChange}/>
             )}
-            </div>
-            <div>
-                <span>Your total is {totalCost}</span>
+                <p>Your total is ${totalCost.toFixed(2)}</p>
+                <button className="bg-dark checkoutbtn">Check out!</button>
             </div>
         </div>
         :
-        <div>
+        <div className="emptycart">
             <p>The cart is currently empty. <Link to={'/products'}>Start shopping</Link></p>
         </div>
         )

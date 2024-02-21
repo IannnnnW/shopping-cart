@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { HashLoader } from "react-spinners"
+import { DotLoader } from "react-spinners"
 import { useOutletContext } from "react-router-dom"
 import toast, {Toaster} from "react-hot-toast"
 import './style.css'
@@ -17,7 +17,7 @@ const ProductCard = ({id, title, imageUrl, price})=>{
     }
     return(
         <div className="card">
-            <p className="productprice">${price}</p>
+            <p className="bg-dark">${price}</p>
             <img style={{width:'100px'}} src={imageUrl}/>
             <p>{title}</p>
             <div className="cardbottom">
@@ -42,7 +42,11 @@ const Products = ()=>{
     }, [])
 
     if(loading){
-        return <HashLoader/>
+        return (
+            <div className="loader">
+                <DotLoader size={'100px'}/>
+            </div>
+        )
     }
     return(
         <div className='allproductscontent'>
@@ -65,7 +69,11 @@ const JeweleryProducts = ()=>{
             })
     }, [])
     if(loading){
-        return <HashLoader/>
+        return (
+            <div className="loader">
+                <DotLoader size={'100px'}/>
+            </div>
+        )
     }
     return(
         <div className='jewelerycontent'>
