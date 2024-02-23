@@ -68,14 +68,12 @@ const Cart = ()=>{
     return(
         (cartItems.length 
         ? 
-        <div>
-            <div className='cart'>
+        <div className='cart'>
             {cartItems.map(item => 
                 <CartItem key={item.id} item={item} removeItem={handleRemoveItem} getCost={handleCountChange}/>
             )}
                 <p>Your total is ${totalCost.toFixed(2)}</p>
                 <button className="bg-dark checkoutbtn">Check out!</button>
-            </div>
         </div>
         :
         <div className="emptycart">
