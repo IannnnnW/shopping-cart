@@ -258,6 +258,7 @@ a{
     .links{
        display: flex;
        flex-direction: row;
+       gap:15px;
     }
     .cartsidebar{
         position: fixed;
@@ -304,7 +305,7 @@ a{
         padding: 5px;
     }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 668px) and (max-width: 1024px) {
     .logo{
         display: none;
     }
@@ -315,7 +316,7 @@ a{
     .links{
         display: flex;
         flex-direction: row;
-        gap: 150px;
+        gap: 200px;
      }
     .cartsidebar{
         position: fixed;
