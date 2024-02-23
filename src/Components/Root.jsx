@@ -12,7 +12,7 @@ function Root() {
     <div className='root'>
         <div className="sidebar">
             <div>
-              <img src={logo}/>
+              <img className="logo" src={logo}/>
               <ul className='links'>
                 <li><NavLink className={({ isActive }) =>
                       isActive
